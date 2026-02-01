@@ -1,0 +1,251 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: url('./assets/pink-textured-paper.jpg') no-repeat center center fixed;
+  background-size: cover;
+  scrollbar-width: none; /* Firefox */
+
+}
+#root {
+  height: 100%;
+  width: 100%;
+  
+}
+.inspiration-regular {
+  font-family: "Inspiration", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+#triup, #tridown {
+  width: 100vw;
+  height: 50vh;
+  position: absolute;
+}
+#triup {
+  top: 0;
+}
+#tridown {
+  bottom: 0;
+}
+#trileft, #triright {
+  width: 50vw;
+  height: 100vh;
+  position: absolute;
+  top:0;
+  
+}
+#triright {
+  right: 0px;
+}
+#trileft {
+  left: 0px;
+}
+
+.seal {
+  position: absolute;
+  width: 200px;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  cursor: pointer;
+  &:hover {
+    transform: scale(0.97) translate(-50%, -50%);
+    transition: transform 0.2s;
+  }
+}
+
+.letterbag {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+@keyframes oll {
+  0% { left:0;}
+  100% { left: -100%; }
+}
+@keyframes olr {
+  0% { right:0;}
+  100% { right: -100%; }
+}
+@keyframes olu {
+  0% { top:0;}
+  100% { top: -100%; }
+}
+@keyframes old {
+  0% { bottom:0;}
+  100% { bottom: -100%; }
+}
+@keyframes seal {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+}
+
+
+.triupanimate {
+  animation: olu 3s forwards;
+}
+.tridownanimate {
+  animation: old 3s forwards;
+}
+.trirightanimate {  
+  animation: olr 3s forwards;
+}
+.trileftanimate { 
+  animation: oll 3s forwards;
+}
+.sealanimate {
+  animation: seal 0.5s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadein {
+  opacity: 0;
+  animation: fade-in 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+.slide2{
+  & > h1 {
+    text-align: center;
+    font-size: 5em;
+    color: #000000;
+  }
+}
+
+.lettertext {
+  font-size: 1em;
+  text-align: left;
+  margin: 0 40px 50px 40px;
+  color: #000000;
+}
+
+.gallery-image {
+  transform: translateX(-50%);
+  width: 300px;
+  height: auto;
+  margin: 10px;
+  
+  padding: 10px 10px 30px 10px;
+  background-color: white;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+#img1 {
+  transform: rotate(5deg);
+}
+
+#img2 {
+  transform: rotate(-8deg);
+}
+
+#img3 {
+  transform: rotate(-10deg);
+}
+
+#img4 {
+  transform: rotate(2deg);
+}
+
+#img5 {
+  transform: rotate(-5deg);
+}
+
+.gallery {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.yesbutton {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 15px 32px;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: 300;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  &:active {
+    scale: 0.95;
+    transition: all 0.1s;
+    background-color: #397d3b;
+  }
+}
+.redbutton{
+  background-color: rgb(255, 69, 69);
+  &:active {
+    scale: 0.95;
+    transition: all 0.1s;
+    background-color: #ab0000;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.question {
+  & > h1 {
+    text-align: center;
+    font-size: 5em;
+    color: #000000;
+    margin-top: -50px;
+  }
+  padding-bottom: 500px;
+  margin-top: 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.heartimg {
+  height: 200px;
+  width:fit-content;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.gif {
+  width: 80%;
+  height: auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+}
+
+.endtext {
+  text-align: center;
+  font-size: 3em;
+  color: #000000;
+}
